@@ -1,0 +1,22 @@
+{
+  "name": "commons",
+  "version": "1.0.0",
+  "description": "A script for setting up signup hours on Google Calendar",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emm035/common-hour.git"
+  },
+  "author": "Eric Marshall",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/emm035/common-hour/issues"
+  },
+  "homepage": "https://github.com/emm035/common-hour#readme",
+  "dependencies": {
+    "google-calendar": "^1.3.2"
+  }
+}
