@@ -4,7 +4,8 @@
   "description": "A script for setting up signup hours on Google Calendar",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "./node_modules/.bin/eslint index.js",
+    "script": "./node_modules/babel-cli/bin/babel-node.js ./index.js"
   },
   "repository": {
     "type": "git",
@@ -21,11 +22,18 @@
     "google-auth-library": "^0.10.0",
     "googleapis": "^19.0.0",
     "moment": "^2.18.1",
-    "moment-timezone": "^0.5.13"
+    "moment-timezone": "^0.5.13",
+    "progress": "^2.0.0"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
     "babel-preset-es2015": "^6.24.1",
-    "babel-preset-stage-0": "^6.24.1"
+    "eslint": "^3.19.0"
+  },
+  "eslintConfig": {
+    "env": {
+      "es6": true,
+      "node": true
+    }
   }
 }
