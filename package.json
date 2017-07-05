@@ -4,7 +4,7 @@
   "description": "A script for setting up signup hours on Google Calendar",
   "main": "index.js",
   "scripts": {
-    "lint": "./node_modules/.bin/eslint index.js",
+    "lint": "./node_modules/.bin/eslint .",
     "script": "./node_modules/babel-cli/bin/babel-node.js ./index.js"
   },
   "repository": {

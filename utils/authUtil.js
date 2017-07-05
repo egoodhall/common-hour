@@ -44,7 +44,7 @@ function authorize(credentials, callback) {
 
 function getToken(credentials){
   return authorize(credentials, (auth) => {
-    return auth.credentials
+    return auth.credentials;
   });
 };
 
