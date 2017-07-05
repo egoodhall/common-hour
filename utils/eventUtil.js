@@ -32,11 +32,9 @@ function buildEvents(config) {
 
 function buildEvent(minDate, dayInfo, config) {
   var maxDate = null;
-  var summary = config.defaultTitle;
 
   if (minDate.hour() === dayInfo.lastShift) {
     maxDate = minDate.clone().add(dayInfo.lastShiftDuration, 'hour');
-     if (dayInfo.lastWorker) summary = dayInfo.lastWorker;
   } else {
     maxDate = minDate.clone().add(dayInfo.defaultShiftDuration, 'hour');
   }
@@ -49,11 +47,12 @@ function buildEvent(minDate, dayInfo, config) {
         dateTime: maxDate.format(),
         timeZone: config.timeZone
       },
-      summary: summary,
+      summary: config.defaultTitle,
       description: config.descriptionKey
   };
   if (dayInfo.lastWorker && minDate.hour() === dayInfo.lastShift) {
     event.colorId = 7;
+    event.summary = dayInfo.lastWorker;
   }
   
   return event;
