@@ -33,8 +33,6 @@ function setupShifts (auth) {
 
   var total = 0;
 
-  console.log(JSON.stringify(auth.credentials.access_token, null, 2));
-
   const batch = new Batchelor({
     'uri':'https://www.googleapis.com/batch',
     'method':'POST',
