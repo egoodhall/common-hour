@@ -1,10 +1,10 @@
 {
-  "calendarId": "bucknell.edu_atcquho3ihu86j5i8v7kvm8668@group.calendar.google.com",
+  "calendarId": "bucknell.edu_h8em5tim4kc3jl40f8otl2rqko@group.calendar.google.com",
   "defaultTitle": "(Student Name)",
-  "descriptionKey": "Default Description - Don't modify",
+  "descriptionKey": "Default Description - Don't modify this",
   "timeZone": "US/Eastern",
-  "startDate": "2017-07-15",
-  "endDate": "2017-07-17",
+  "offsetDate": 7,
+  "period": 7,
   "days": [
     { 
       "name": "monday", 
@@ -39,23 +39,21 @@
       "firstShift": 7, 
       "defaultShiftDuration": 1,
       "lastShift": 21,
-      "lastShiftDuration": 3
+      "lastShiftDuration": 0
     },
     {
       "name": "saturday",
       "firstShift": 9, 
       "defaultShiftDuration": 1,
       "lastShift": 21,
-      "lastShiftDuration": 3,
-      "lastWorker": "Eric"
+      "lastShiftDuration": 0
     },
     {
       "name": "sunday",
       "firstShift": 9, 
       "defaultShiftDuration": 1,
       "lastShift": 21,
-      "lastShiftDuration": 5,
-      "lastWorker": "Eric"
+      "lastShiftDuration": 5
     }
   ]
 }

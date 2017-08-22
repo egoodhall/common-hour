@@ -11,8 +11,20 @@ module.exports = {
 function buildEvents(config) {
   moment.tz.setDefault("America/New_York");
   var events = [];
-  var currentDate = moment.tz(config.startDate, config.timeZone);
-  var finalDate   = moment.tz(config.endDate, config.timeZone).add(1, 'day');
+  let currentDate;
+  let finalDate;
+  if (config.startDate && config.endDate) {
+    currentDate = moment.tz(config.startDate, config.timeZone);
+    finalDate   = moment.tz(config.endDate, config.timeZone).add(1, 'day');
+  } else if (config.offsetDate && config.period) {
+    const start = moment().add(config.offsetDate, 'day').format('YYYY-MM-DD');
+    currentDate = moment.tz(start, config.timeZone);
+    finalDate   = moment.tz(start, config.timeZone).add(config.period, 'day');
+  } else {
+    const start = moment().format('YYYY-MM-DD');
+    currentDate = moment.tz(start, config.timeZone);
+    finalDate   = moment.tz(start, config.timeZone).add(8, 'day');
+  }
   
   while (currentDate < finalDate) {
   
@@ -20,7 +32,10 @@ function buildEvents(config) {
     currentDate.hour(dayInfo.firstShift);
   
     while(currentDate.hour() <= dayInfo.lastShift) {
-      events.push(buildEvent(currentDate, dayInfo, config));
+      const event = buildEvent(currentDate, dayInfo, config);
+      if (event.start.dateTime !== event.end.dateTime) {
+        events.push(event);
+      }
       currentDate.add(1, 'hour');
     }
     currentDate.add(1, 'day');

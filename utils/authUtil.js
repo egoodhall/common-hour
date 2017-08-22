@@ -24,7 +24,7 @@ module.exports = {
  * @param {Object} credentials The authorization client credentials.
  * @param {function} callback The callback to call with the authorized client.
  */
-function authorize(credentials, callback) {
+function authorize(credentials, onComplete) {
   var clientSecret = credentials.installed.client_secret;
   var clientId = credentials.installed.client_id;
   var redirectUrl = credentials.installed.redirect_uris[0];
@@ -34,10 +34,10 @@ function authorize(credentials, callback) {
   // Check if we have previously stored a token.
   readFile(TOKEN_PATH, function (err, token) {
     if (err) {
-      getNewToken(oauth2Client, callback);
+      getNewToken(oauth2Client, onComplete);
     } else {
       oauth2Client.credentials = JSON.parse(token);
-      callback(oauth2Client);
+      onComplete(oauth2Client);
     }
   });
 };
@@ -56,7 +56,7 @@ function getToken(credentials){
  * @param {getEventsCallback} callback The callback to call with the authorized
  *     client.
  */
-function getNewToken (oauth2Client, callback) {
+function getNewToken (oauth2Client, onComplete) {
   var authUrl = oauth2Client.generateAuthUrl({
     access_type: 'offline',
     scope: SCOPES
@@ -75,7 +75,7 @@ function getNewToken (oauth2Client, callback) {
       }
       oauth2Client.credentials = token;
       storeToken(token);
-      callback(oauth2Client);
+      onComplete(oauth2Client);
     });
   });
 };
