@@ -9,7 +9,7 @@ npm run script
 ### config.json should be formatted as follows:
 ```json
 {
-  "calendarId": "bucknell.edu_atcquho3ihu86j5i8v7kvm8668@group.calendar.google.com",
+  "calendarId": "<your-calendar-id>",
   "defaultTitle": "(Student Name)",
   "descriptionKey": "Default Description - Don't modify",
   "timeZone": "US/Eastern",
