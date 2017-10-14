@@ -1,56 +1,56 @@
 {
-  "calendarId": "",
+  "calendarId": "[calendar id]",
   "defaultTitle": "(Student Name)",
   "descriptionKey": "Default Description - Don't modify this",
   "timeZone": "US/Eastern",
-  "offsetDate": 7,
-  "period": 7,
+  "startDate": "2017-10-15",
+  "endDate": "2017-10-21",
   "days": [
-    { 
-      "name": "monday", 
-      "firstShift": 7, 
+    {
+      "name": "monday",
+      "firstShift": 7,
       "defaultShiftDuration": 1,
       "lastShift": 21,
-      "lastShiftDuration": 5 
+      "lastShiftDuration": 5
     },
     {
       "name": "tuesday",
-      "firstShift": 7, 
+      "firstShift": 7,
       "defaultShiftDuration": 1,
       "lastShift": 21,
       "lastShiftDuration": 5
     },
     {
       "name": "wednesday",
-      "firstShift": 7, 
+      "firstShift": 7,
       "defaultShiftDuration": 1,
       "lastShift": 21,
       "lastShiftDuration": 5
     },
     {
       "name": "thursday",
-      "firstShift": 7, 
+      "firstShift": 7,
       "defaultShiftDuration": 1,
       "lastShift": 21,
       "lastShiftDuration": 5
     },
     {
       "name": "friday",
-      "firstShift": 7, 
+      "firstShift": 7,
       "defaultShiftDuration": 1,
       "lastShift": 21,
       "lastShiftDuration": 0
     },
     {
       "name": "saturday",
-      "firstShift": 9, 
+      "firstShift": 9,
       "defaultShiftDuration": 1,
       "lastShift": 21,
       "lastShiftDuration": 0
     },
     {
       "name": "sunday",
-      "firstShift": 9, 
+      "firstShift": 9,
       "defaultShiftDuration": 1,
       "lastShift": 21,
       "lastShiftDuration": 5
